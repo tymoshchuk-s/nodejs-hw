@@ -26,12 +26,12 @@ app.use(
 );
 
 app.get('/notes', (req, res) => {
-  res.status(200).json({ message: 'Retrived all notes' });
+  res.status(200).json({ message: 'Retrieved all notes' });
 });
 
 app.get('/notes/:noteId', (req, res) => {
   const id_param = req.params.noteId;
-  res.status(200).json({ message: `Retrived note with ID: ${id_param}` });
+  res.status(200).json({ message: `Retrieved note with ID: ${id_param}` });
 });
 
 app.get('/test-error', (req, res) => {
