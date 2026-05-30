@@ -10,9 +10,9 @@ import {
 const noteRouter = Router();
 
 noteRouter.get('/notes', getAllNotes);
-noteRouter.get('/:noteId', getNoteById);
+noteRouter.get('/notes/:noteId', getNoteById);
 noteRouter.post('/notes', createNote);
-noteRouter.put('/:noteId', updateNote);
-noteRouter.delete('/:noteId', deleteNote);
+noteRouter.put('/notes/:noteId', updateNote);
+noteRouter.delete('/notes/:noteId', deleteNote);
 
 export default noteRouter;
