@@ -26,7 +26,7 @@ export const deleteNote = async (req, res) => {
   if (!deletedNote) {
     throw createHttpError(404, 'Note not found');
   }
-  res.status(200).json({ message: 'Note deleted successfully' });
+  res.status(200).json(deletedNote);
 };
 
 export const updateNote = async (req, res) => {

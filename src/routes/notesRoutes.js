@@ -12,7 +12,7 @@ const noteRouter = Router();
 noteRouter.get('/notes', getAllNotes);
 noteRouter.get('/notes/:noteId', getNoteById);
 noteRouter.post('/notes', createNote);
-noteRouter.put('/notes/:noteId', updateNote);
+noteRouter.patch('/notes/:noteId', updateNote);
 noteRouter.delete('/notes/:noteId', deleteNote);
 
 export default noteRouter;
