@@ -7,9 +7,6 @@ export const getAllNotes = async (req, res) => {
   const noteQuery = Note.find({
     userId: req.user._id,
   });
-  if (!noteQuery) {
-    throw createHttpError(404, 'Note not found');
-  }
 
   if (tag) {
     noteQuery.where('tag').equals(tag);

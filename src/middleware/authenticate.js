@@ -18,7 +18,7 @@ export const authenticate = async (req, res, next) => {
     throw createHttpError(401, 'Session not found');
   }
 
-  const isAccessTokenValid = session.accessTokenExpiresAt > new Date();
+  const isAccessTokenValid = session.accessTokenValidUntil > new Date();
 
   if (!isAccessTokenValid) {
     throw createHttpError(401, 'Access token expired');
