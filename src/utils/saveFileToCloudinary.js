@@ -7,7 +7,7 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-export async function saveFileToCloudinary(buffer, userId) {
+export default async function saveFileToCloudinary(buffer, userId) {
   const options = {
     public_id: `avatars/${userId}`,
     overwrite: true,
